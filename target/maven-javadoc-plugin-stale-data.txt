@@ -1,0 +1,47 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'/Users/ayaam/Programming/School/polynomial/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/ayaam/Programming/School/polynomial/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'polynomial 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'polynomial 1.0-SNAPSHOT API'
+edu.guilford
+/Users/ayaam/Programming/School/polynomial/src/main/java = 1737743153040
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/tag-search-index.js = 1737744830718
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/overview-tree.html = 1737744830712
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/module-search-index.js = 1737744830717
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/index.html = 1737744830722
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/package-search-index.js = 1737744830717
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/link.svg = 1737744830725
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/index-all.html = 1737744830721
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/allpackages-index.html = 1737744830717
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/member-search-index.js = 1737744830717
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/copy.svg = 1737744830725
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/script.js = 1737744830725
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/stylesheet.css = 1737744830724
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/search-page.js = 1737744830726
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/help-doc.html = 1737744830723
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/element-list = 1737744830699
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/search.html = 1737744830721
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/allclasses-index.html = 1737744830716
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/type-search-index.js = 1737744830717
+/Users/ayaam/Programming/School/polynomial/target/reports/apidocs/search.js = 1737744830726
