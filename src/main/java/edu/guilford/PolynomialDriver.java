@@ -64,8 +64,8 @@ public class PolynomialDriver {
         System.out.println("Comparison result: Polynomial 1.compareTo(Polynomial 2) = " + p1.compareTo(p2));
 
         // Additional tests for compareTo
-        Polynomial p3 = new Polynomial(new ArrayList<>(Arrays.asList(1.0, 2.0, 3.0)));
-        Polynomial p4 = new Polynomial(new ArrayList<>(Arrays.asList(1.0, 2.0, 3.0)));
+        Polynomial p3 = new Polynomial(12);
+        Polynomial p4 = new Polynomial();
         System.out.println("Comparison result: Polynomial 3.compareTo(Polynomial 4) = " + p3.compareTo(p4));
 
         Polynomial p5 = new Polynomial(new ArrayList<>(Arrays.asList(1.0, 2.0, 3.0, 4.0)));

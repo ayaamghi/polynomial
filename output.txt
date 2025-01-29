@@ -20,5 +20,5 @@ Multiplication result: 38.08x^5 + 60.599999999999994x^4 + 70.83999999999999x^3 +
 
 Testing compareTo method:
 Comparison result: Polynomial 1.compareTo(Polynomial 2) = 1
-Comparison result: Polynomial 3.compareTo(Polynomial 4) = 0
-Comparison result: Polynomial 3.compareTo(Polynomial 5) = -1
+Comparison result: Polynomial 3.compareTo(Polynomial 4) = 1
+Comparison result: Polynomial 3.compareTo(Polynomial 5) = 1
