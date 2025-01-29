@@ -1,24 +1,101 @@
-Testing constructors:
-Polynomial 1: 4.6x^3 + 3.3x^2 + 2.5x^1 + 1.0
-Polynomial 2: 6.8x^2 + 5.6x^1 + 4.1
+=== Testing Constructors ===
 
-Testing getters and setters:
-Degree of Polynomial 1: 3.0
-Coefficients of Polynomial 1: [1.0, 2.5, 3.3, 4.6]
-Updated Polynomial 1: 5.6x^3 + 4.3x^2 + 3.5x^1 + 2.0
+-- Default Constructor --
+Default Polynomial: 0
+Degree: -1.0
+Coefficients: []
 
-Testing addition of polynomials:
-Polynomial 1: 5.6x^3 + 4.3x^2 + 3.5x^1 + 2.0
-Polynomial 2: 6.8x^2 + 5.6x^1 + 4.1
-Addition result: 5.6x^3 + 11.1x^2 + 9.1x^1 + 6.1
+-- Coefficient-Based Constructor --
+Coefficient Polynomial: 4.60x^3 + 3.30x^2 + 2.50x^1 + 1.00
+Degree: 3.0
+Coefficients: [1.0, 2.5, 3.3, 4.6]
 
-Testing subtraction of polynomials:
-Subtraction result: 5.6x^3 + -2.5x^2 + -2.0999999999999996x^1 + -2.0999999999999996
+-- Degree-Based Constructor (degree = 3) --
+Degree Polynomial: -13.93x^3 + -10.15x^2 + 5.25x^1 + 5.18
+Degree: 3.0
+Coefficients: [5.179966458891595, 5.25403814858328, -10.14726440403151, -13.93439908823824]
 
-Testing multiplication of polynomials:
-Multiplication result: 38.08x^5 + 60.599999999999994x^4 + 70.83999999999999x^3 + 50.83x^2 + 25.549999999999997x^1 + 8.2
+=== Testing Getters and Setters ===
 
-Testing compareTo method:
-Comparison result: Polynomial 1.compareTo(Polynomial 2) = 1
-Comparison result: Polynomial 3.compareTo(Polynomial 4) = 1
-Comparison result: Polynomial 3.compareTo(Polynomial 5) = 1
+Initial Polynomial: 5.60x^3 + 4.30x^2 + 3.50x^1 + 2.00
+Degree: 3.0
+Coefficients: [2.0, 3.5, 4.3, 5.6]
+
+-- Testing getCoefficient --
+Coefficient for x^2: 4.3
+
+-- Testing setCoefficients --
+Setting new coefficients to: [5.0, 6.5, 7.3, 8.6, 9.9]
+Updated Polynomial after setCoefficients: 9.90x^4 + 8.60x^3 + 7.30x^2 + 6.50x^1 + 5.00
+Degree after update: 4.0
+Coefficients after update: [5.0, 6.5, 7.3, 8.6, 9.9]
+
+-- Testing setCoefficient within current degree --
+Setting coefficient for x^3 to 10.0
+Updated Polynomial after setCoefficient: 9.90x^4 + 10.00x^3 + 7.30x^2 + 6.50x^1 + 5.00
+Degree after setCoefficient: 4.0
+Coefficients after setCoefficient: [5.0, 6.5, 7.3, 10.0, 9.9]
+
+-- Testing setCoefficient beyond current degree --
+Attempting to set coefficient for x^6 to 15.0
+Error: Index 6 out of bounds for length 5
+Cannot set coefficient for x^6 as it exceeds the current degree.
+
+-- Extending coefficients to set x^6 --
+Extended Coefficients: [5.0, 6.5, 7.3, 10.0, 9.9, 0.0, 0.0]
+Setting coefficient for x^6 to 15.0
+Updated Polynomial after setting x^6: 15.00x^6 + 9.90x^4 + 10.00x^3 + 7.30x^2 + 6.50x^1 + 5.00
+Degree after setting x^6: 6.0
+Coefficients after setting x^6: [5.0, 6.5, 7.3, 10.0, 9.9, 0.0, 15.0]
+
+=== Testing toString Method ===
+Polynomial: 4.10x^3 + 2.50x^2 + 3.00
+
+=== Testing Arithmetic Operations ===
+
+Polynomial 1: 4.60x^3 + 3.30x^2 + 2.50x^1 + 1.00
+Polynomial 2: 6.80x^2 + 5.60x^1 + 4.10
+
+-- Addition --
+Addition Result: 4.60x^3 + 10.10x^2 + 8.10x^1 + 5.10
+
+-- Subtraction --
+Subtraction Result: 4.60x^3 + -3.50x^2 + -3.10x^1 + -3.10
+
+-- Multiplication --
+Multiplication Result: 31.28x^5 + 48.20x^4 + 54.34x^3 + 34.33x^2 + 15.85x^1 + 4.10
+
+=== Testing compareTo Method ===
+
+Polynomial 1: 5.60x^3 + 4.30x^2 + 3.50x^1 + 2.00
+Polynomial 2: 6.80x^2 + 5.60x^1 + 4.10
+Polynomial 1.compareTo(Polynomial 2) = 1
+
+Polynomial 3: -1.11x^12 + 12.20x^11 + -1.25x^10 + -8.47x^9 + -12.04x^8 + -3.50x^7 + 7.90x^6 + 1.85x^5 + -11.95x^4 + 11.95x^3 + 13.05x^2 + -12.08x^1 + 0.38
+Polynomial 4: 0
+Polynomial 3.compareTo(Polynomial 4) = 1
+
+Polynomial 5: 4.00x^3 + 3.00x^2 + 2.00x^1 + 1.00
+Polynomial 3.compareTo(Polynomial 5) = 1
+
+Polynomial 6: 3.00x^2 + 2.00x^1 + 1.00
+Polynomial 7: 3.00x^2 + 2.00x^1 + 1.00
+Polynomial 6.compareTo(Polynomial 7) = 0
+
+=== Testing Sorting of Random Polynomials ===
+
+-- Creating Random Polynomials --
+Random Polynomial 1: -5.41x^10 + 10.76x^9 + 3.06x^8 + 0.04x^7 + 4.28x^6 + -13.68x^5 + -9.28x^4 + -4.84x^3 + 0.34x^2 + -9.69x^1 + 12.28
+Random Polynomial 2: -6.86x^9 + -3.65x^8 + -14.04x^7 + 8.44x^6 + -11.19x^5 + 0.07x^4 + -6.16x^3 + 10.48x^2 + -9.76x^1 + 0.20
+Random Polynomial 3: 5.32x^10 + -10.84x^9 + 10.97x^8 + -13.57x^7 + 2.70x^6 + 3.24x^5 + 6.73x^4 + 6.76x^3 + 0.18x^2 + 10.19x^1 + -2.64
+Random Polynomial 4: -10.98x^8 + -9.21x^7 + -7.39x^6 + -4.60x^5 + -14.01x^4 + -4.38x^3 + -4.23x^2 + -7.17x^1 + 7.51
+Random Polynomial 5: -0.62x^4 + -1.86x^3 + -14.61x^2 + 8.05x^1 + 7.25
+
+-- Sorting Polynomials by Degree and Coefficients --
+
+Sorted Polynomials:
+Polynomial 1: -0.62x^4 + -1.86x^3 + -14.61x^2 + 8.05x^1 + 7.25
+Polynomial 2: -10.98x^8 + -9.21x^7 + -7.39x^6 + -4.60x^5 + -14.01x^4 + -4.38x^3 + -4.23x^2 + -7.17x^1 + 7.51
+Polynomial 3: -6.86x^9 + -3.65x^8 + -14.04x^7 + 8.44x^6 + -11.19x^5 + 0.07x^4 + -6.16x^3 + 10.48x^2 + -9.76x^1 + 0.20
+Polynomial 4: -5.41x^10 + 10.76x^9 + 3.06x^8 + 0.04x^7 + 4.28x^6 + -13.68x^5 + -9.28x^4 + -4.84x^3 + 0.34x^2 + -9.69x^1 + 12.28
+Polynomial 5: 5.32x^10 + -10.84x^9 + 10.97x^8 + -13.57x^7 + 2.70x^6 + 3.24x^5 + 6.73x^4 + 6.76x^3 + 0.18x^2 + 10.19x^1 + -2.64
